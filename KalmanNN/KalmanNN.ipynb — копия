@@ -1,0 +1,1162 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8.3"
+    },
+    "colab": {
+      "name": "KalmanNN.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "toc_visible": true
+    },
+    "accelerator": "GPU",
+    "widgets": {
+      "application/vnd.jupyter.widget-state+json": {
+        "c5551c229cfa458e9a16b5602cccd491": {
+          "model_module": "@jupyter-widgets/controls",
+          "model_name": "HBoxModel",
+          "state": {
+            "_view_name": "HBoxView",
+            "_dom_classes": [],
+            "_model_name": "HBoxModel",
+            "_view_module": "@jupyter-widgets/controls",
+            "_model_module_version": "1.5.0",
+            "_view_count": null,
+            "_view_module_version": "1.5.0",
+            "box_style": "",
+            "layout": "IPY_MODEL_e3cb051baf5d40088b2a78b327ac2ba6",
+            "_model_module": "@jupyter-widgets/controls",
+            "children": [
+              "IPY_MODEL_6e0a029a348d44cb8afff4f016574244",
+              "IPY_MODEL_6a9907fd77884c4886811c678e1933a9"
+            ]
+          }
+        },
+        "e3cb051baf5d40088b2a78b327ac2ba6": {
+          "model_module": "@jupyter-widgets/base",
+          "model_name": "LayoutModel",
+          "state": {
+            "_view_name": "LayoutView",
+            "grid_template_rows": null,
+            "right": null,
+            "justify_content": null,
+            "_view_module": "@jupyter-widgets/base",
+            "overflow": null,
+            "_model_module_version": "1.2.0",
+            "_view_count": null,
+            "flex_flow": null,
+            "width": null,
+            "min_width": null,
+            "border": null,
+            "align_items": null,
+            "bottom": null,
+            "_model_module": "@jupyter-widgets/base",
+            "top": null,
+            "grid_column": null,
+            "overflow_y": null,
+            "overflow_x": null,
+            "grid_auto_flow": null,
+            "grid_area": null,
+            "grid_template_columns": null,
+            "flex": null,
+            "_model_name": "LayoutModel",
+            "justify_items": null,
+            "grid_row": null,
+            "max_height": null,
+            "align_content": null,
+            "visibility": null,
+            "align_self": null,
+            "height": null,
+            "min_height": null,
+            "padding": null,
+            "grid_auto_rows": null,
+            "grid_gap": null,
+            "max_width": null,
+            "order": null,
+            "_view_module_version": "1.2.0",
+            "grid_template_areas": null,
+            "object_position": null,
+            "object_fit": null,
+            "grid_auto_columns": null,
+            "margin": null,
+            "display": null,
+            "left": null
+          }
+        },
+        "6e0a029a348d44cb8afff4f016574244": {
+          "model_module": "@jupyter-widgets/controls",
+          "model_name": "FloatProgressModel",
+          "state": {
+            "_view_name": "ProgressView",
+            "style": "IPY_MODEL_4a21cc0a84e74405a0be32d14d4384ee",
+            "_dom_classes": [],
+            "description": "Collecting strided data: 100%",
+            "_model_name": "FloatProgressModel",
+            "bar_style": "success",
+            "max": 700,
+            "_view_module": "@jupyter-widgets/controls",
+            "_model_module_version": "1.5.0",
+            "value": 700,
+            "_view_count": null,
+            "_view_module_version": "1.5.0",
+            "orientation": "horizontal",
+            "min": 0,
+            "description_tooltip": null,
+            "_model_module": "@jupyter-widgets/controls",
+            "layout": "IPY_MODEL_52f845857ccd44dd81aa95b16a551c4b"
+          }
+        },
+        "6a9907fd77884c4886811c678e1933a9": {
+          "model_module": "@jupyter-widgets/controls",
+          "model_name": "HTMLModel",
+          "state": {
+            "_view_name": "HTMLView",
+            "style": "IPY_MODEL_8a960a059a0c4a65ba0c4e34624ddb0a",
+            "_dom_classes": [],
+            "description": "",
+            "_model_name": "HTMLModel",
+            "placeholder": "​",
+            "_view_module": "@jupyter-widgets/controls",
+            "_model_module_version": "1.5.0",
+            "value": " 700/700 [02:32&lt;00:00,  4.59it/s]",
+            "_view_count": null,
+            "_view_module_version": "1.5.0",
+            "description_tooltip": null,
+            "_model_module": "@jupyter-widgets/controls",
+            "layout": "IPY_MODEL_da71acce88c74b73a97f7ceae58f434c"
+          }
+        },
+        "4a21cc0a84e74405a0be32d14d4384ee": {
+          "model_module": "@jupyter-widgets/controls",
+          "model_name": "ProgressStyleModel",
+          "state": {
+            "_view_name": "StyleView",
+            "_model_name": "ProgressStyleModel",
+            "description_width": "initial",
+            "_view_module": "@jupyter-widgets/base",
+            "_model_module_version": "1.5.0",
+            "_view_count": null,
+            "_view_module_version": "1.2.0",
+            "bar_color": null,
+            "_model_module": "@jupyter-widgets/controls"
+          }
+        },
+        "52f845857ccd44dd81aa95b16a551c4b": {
+          "model_module": "@jupyter-widgets/base",
+          "model_name": "LayoutModel",
+          "state": {
+            "_view_name": "LayoutView",
+            "grid_template_rows": null,
+            "right": null,
+            "justify_content": null,
+            "_view_module": "@jupyter-widgets/base",
+            "overflow": null,
+            "_model_module_version": "1.2.0",
+            "_view_count": null,
+            "flex_flow": null,
+            "width": null,
+            "min_width": null,
+            "border": null,
+            "align_items": null,
+            "bottom": null,
+            "_model_module": "@jupyter-widgets/base",
+            "top": null,
+            "grid_column": null,
+            "overflow_y": null,
+            "overflow_x": null,
+            "grid_auto_flow": null,
+            "grid_area": null,
+            "grid_template_columns": null,
+            "flex": null,
+            "_model_name": "LayoutModel",
+            "justify_items": null,
+            "grid_row": null,
+            "max_height": null,
+            "align_content": null,
+            "visibility": null,
+            "align_self": null,
+            "height": null,
+            "min_height": null,
+            "padding": null,
+            "grid_auto_rows": null,
+            "grid_gap": null,
+            "max_width": null,
+            "order": null,
+            "_view_module_version": "1.2.0",
+            "grid_template_areas": null,
+            "object_position": null,
+            "object_fit": null,
+            "grid_auto_columns": null,
+            "margin": null,
+            "display": null,
+            "left": null
+          }
+        },
+        "8a960a059a0c4a65ba0c4e34624ddb0a": {
+          "model_module": "@jupyter-widgets/controls",
+          "model_name": "DescriptionStyleModel",
+          "state": {
+            "_view_name": "StyleView",
+            "_model_name": "DescriptionStyleModel",
+            "description_width": "",
+            "_view_module": "@jupyter-widgets/base",
+            "_model_module_version": "1.5.0",
+            "_view_count": null,
+            "_view_module_version": "1.2.0",
+            "_model_module": "@jupyter-widgets/controls"
+          }
+        },
+        "da71acce88c74b73a97f7ceae58f434c": {
+          "model_module": "@jupyter-widgets/base",
+          "model_name": "LayoutModel",
+          "state": {
+            "_view_name": "LayoutView",
+            "grid_template_rows": null,
+            "right": null,
+            "justify_content": null,
+            "_view_module": "@jupyter-widgets/base",
+            "overflow": null,
+            "_model_module_version": "1.2.0",
+            "_view_count": null,
+            "flex_flow": null,
+            "width": null,
+            "min_width": null,
+            "border": null,
+            "align_items": null,
+            "bottom": null,
+            "_model_module": "@jupyter-widgets/base",
+            "top": null,
+            "grid_column": null,
+            "overflow_y": null,
+            "overflow_x": null,
+            "grid_auto_flow": null,
+            "grid_area": null,
+            "grid_template_columns": null,
+            "flex": null,
+            "_model_name": "LayoutModel",
+            "justify_items": null,
+            "grid_row": null,
+            "max_height": null,
+            "align_content": null,
+            "visibility": null,
+            "align_self": null,
+            "height": null,
+            "min_height": null,
+            "padding": null,
+            "grid_auto_rows": null,
+            "grid_gap": null,
+            "max_width": null,
+            "order": null,
+            "_view_module_version": "1.2.0",
+            "grid_template_areas": null,
+            "object_position": null,
+            "object_fit": null,
+            "grid_auto_columns": null,
+            "margin": null,
+            "display": null,
+            "left": null
+          }
+        }
+      }
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "wTCEDjPbCo_y"
+      },
+      "source": [
+        "# standard imports\\n\",\n",
+        "import os\n",
+        "import random\n",
+        "import numpy as np\n",
+        "\n",
+        "# work with data\\n\",\n",
+        "import pandas as pd\n",
+        "import h5py\n",
+        "import matplotlib.pyplot as plt\n",
+        "%matplotlib inline\n",
+        "from mpl_toolkits.mplot3d import Axes3D\n",
+        "import glob\n",
+        "from tqdm.auto import tqdm\n",
+        "\n",
+        "# like numpy, only good + NN\n",
+        "import torch, torch.nn as nn\n",
+        "import torch.nn.functional as torch_nn_F\n",
+        "from torch.utils.data import DataLoader, Dataset, Subset\n",
+        "# import torchvision\n",
+        "# from torchvision import transforms\n",
+        "\n",
+        "plt.rcParams[\n",
+        "    \"figure.facecolor\"\n",
+        "] = \"w\"  # force white background on plots when using dark mode in JupyterLab\n",
+        "\n",
+        "# Dark plots\\n\",\n",
+        "#plt.style.use('dark_background')\\n\",\n",
+        "\n",
+        "TIME_STEP = 1\n",
+        "CLASSNAME = {0: 'ballistic', 1: 'hgv', 2: 'hcm'}\n",
+        "CLASSTYPE = {'ballistic': 0, 'hgv': 1, 'hcm': 2}"
+      ],
+      "execution_count": 1,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "R2JCNbReCo_y"
+      },
+      "source": [
+        "# Prepare data\n",
+        "## Load and examine data"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Ont_TbhRCo_y"
+      },
+      "source": [
+        "# Data reading function\n",
+        "def read_trajectories(path_to_file):\n",
+        "    dset = pd.HDFStore(path_to_file, 'r')\n",
+        "#     print(dset.info())\\n\",\n",
+        "    return dset"
+      ],
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "4f52lAtRCo_y"
+      },
+      "source": [
+        "# reading\n",
+        "name_file_trajectories = './ballistic_batch_1000_nopad.h5'\n",
+        "try:\n",
+        "    dset = read_trajectories(name_file_trajectories)\n",
+        "except FileNotFoundError:\n",
+        "    assert \"NO file!!!\""
+      ],
+      "execution_count": 3,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "u9sk-0Q3Co_y"
+      },
+      "source": [
+        "## Splitting the data"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "wS-OhyqoCo_z"
+      },
+      "source": [
+        "def train_val_test_split(data, tts = (0.7, 0.1, 0.2), shuffle=False):\n",
+        "    '''Split data into train, validation and test sets according to `tts` tuple\n",
+        "\n",
+        "    By default, tts = (train, val, test) = (0.7, 0.1, 0.2)\n",
+        "    '''\n",
+        "    assert sum(tts) == 1\n",
+        "\n",
+        "    if shuffle:\n",
+        "        data = np.random.shuffle(data)\n",
+        "\n",
+        "    h = len(data)\n",
+        "    train = data[:int(h * tts[0])]\n",
+        "    val = data[int(h * tts[0]) : int(h * np.round(tts[0] + tts[1], 4))]\n",
+        "    test = data[int(h * np.round(tts[0] + tts[1], 4)) : int(h * sum(tts))]\n",
+        "\n",
+        "    return train, val, test"
+      ],
+      "execution_count": 4,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yE47y-XaCo_z",
+        "outputId": "55ec6b06-f0c6-4db7-cb96-f2766180e0c4"
+      },
+      "source": [
+        "# Train-val-test split data\n",
+        "data_keys = sorted([key for key in dset.keys() if 'raw' in key])\n",
+        "# Test data       = 20% of total keys\n",
+        "# Validation data = 10% of total keys\n",
+        "# Train data      = 70% of total keys\n",
+        "train_keys, val_keys, test_keys = train_val_test_split(\n",
+        "    data_keys, (0.7, 0.1, 0.2), shuffle=False)\n",
+        "\n",
+        "print(f'Train keys: {len(train_keys):>5} -> {len(train_keys)/len(data_keys) * 100}%')\n",
+        "print(f'Valid keys: {len(val_keys):>5} -> {len(val_keys)/len(data_keys) * 100}%')\n",
+        "print(f'Test keys:  {len(test_keys):>5} -> {len(test_keys)/len(data_keys) * 100}%')"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Train keys:   700 -> 70.0%\n",
+            "Valid keys:   100 -> 10.0%\n",
+            "Test keys:    200 -> 20.0%\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "5arQSdUKCo_z"
+      },
+      "source": [
+        "# # example\n",
+        "# len(dset.keys())\n",
+        "# dset[dset.keys()[0]]\n",
+        "# len(np.array(dset[dset.keys()[0]])[:,0])"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MBM-6q37Co_0"
+      },
+      "source": [
+        "## Invertible trajectory pre-processing transform\""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "U_-mtPGzCo_0"
+      },
+      "source": [
+        "class RelativeTrajectory():\n",
+        "    def __init__(self, df, diff=False, ref_point=20):\n",
+        "\n",
+        "        self.diff = diff\n",
+        "        self.ref_point = ref_point\n",
+        "        \n",
+        "        data = np.array(df.drop('t', 1))\n",
+        "        \n",
+        "        # Remember first state\n",
+        "        self.start_state = data[0].copy()\n",
+        "        \n",
+        "        # Make changes relative to the start state\n",
+        "        data -= self.start_state\n",
+        "        \n",
+        "        # Rotate coordinate system around Z axis, \n",
+        "        # so X` axis will pass through the 20'th point\n",
+        "        # and Y` axis will represent deviation\n",
+        "\n",
+        "        ## Calculate angle of rotation: arctan(y_r / x_r), where r is ref_point\n",
+        "        assert data.shape[0] >= ref_point\n",
+        "        self.theta = np.arctan(data[ref_point][1] / data[ref_point][0])\n",
+        "\n",
+        "        ## Rotation matrix for XY plane around Z axis\n",
+        "        ## Perform rotation for coordinates\n",
+        "        data[:, :3] = self.rotate_Z(data[:, :3], self.theta)\n",
+        "\n",
+        "        ## Perform rotation for velocities\n",
+        "        data[:, 3:6] = self.rotate_Z(data[:, 3:6], self.theta)\n",
+        "\n",
+        "        # Scale data to kilometers\n",
+        "        data /= 1000\n",
+        "\n",
+        "        self.first_diff_elem = None\n",
+        "        if diff:\n",
+        "            self.first_diff_elem = data[0].copy()\n",
+        "            data = np.diff(data, axis=0)    \n",
+        "        \n",
+        "        self.data = data\n",
+        "        \n",
+        "    def restore(self, columns, ts=1, config=None):\n",
+        "        \n",
+        "        assert ts > 0\n",
+        "        \n",
+        "        if config:\n",
+        "            self.set_info(config)\n",
+        "        \n",
+        "        # Restore diff data\n",
+        "        if self.diff:\n",
+        "            data = np.r_[np.expand_dims(self.first_diff_elem, 0), np.cumsum(self.data, axis=0)]\n",
+        "        else:         \n",
+        "            data = self.data.copy()\n",
+        "        \n",
+        "        # Scale data from km back to meters\n",
+        "        data *= 1000\n",
+        "        \n",
+        "        ## Rotation matrix for XY plane around Z axis\n",
+        "        ## Perform rotation for coordinates\n",
+        "        data[:, 0:3] = self.rotate_Z(data[:, 0:3], -self.theta)\n",
+        "\n",
+        "        ## Perform rotation for velocities\n",
+        "        data[:, 3:6] = self.rotate_Z(data[:, 3:6], -self.theta)\n",
+        "        \n",
+        "        # Make changes absolute\n",
+        "        data += self.start_state\n",
+        "\n",
+        "        # Restore Pandas.DataFrame format\n",
+        "        t = np.arange(0, data.shape[0], ts)\n",
+        "        data = np.c_[data, t] \n",
+        "        data = pd.DataFrame(data, columns=columns)\n",
+        "        \n",
+        "        return data\n",
+        "        \n",
+        "    @staticmethod\n",
+        "    def rotate_Z(data, theta):\n",
+        "        \"\"\"Rotate data around the Z axis using matrix R\"\"\"\n",
+        "        \n",
+        "        R = np.array([\n",
+        "            [np.cos(theta), -np.sin(theta), 0],\n",
+        "            [np.sin(theta),  np.cos(theta), 0],\n",
+        "            [            0,              0, 1]\n",
+        "        ])\n",
+        "        return data @ R.T\n",
+        "    \n",
+        "    def info(self):\n",
+        "        return {\n",
+        "            'ref_point' : self.ref_point,\n",
+        "            'diff' : self.diff,\n",
+        "            'start_state' : self.start_state,\n",
+        "            'first_diff_elem' : self.first_diff_elem,\n",
+        "            'theta' : self.theta\n",
+        "        }\n",
+        "    \n",
+        "    def set_info(self, config):\n",
+        "        self.ref_point = config['ref_point']\n",
+        "        self.diff = config['diff']\n",
+        "        self.start_point = config['start_point']\n",
+        "        self.first_diff_elem = config['first_diff_elem']\n",
+        "        self.theta = config['theta']"
+      ],
+      "execution_count": 6,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "QPsATrbJCo_0"
+      },
+      "source": [
+        "## Preprocess data for training"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "0zmkSG4NCo_0"
+      },
+      "source": [
+        "def max_min_len_coordinate(dset, keys):\n",
+        "    max_size = 0\n",
+        "    min_size = len(np.array(dset[keys[0]])[:,0])\n",
+        "    for key_k in keys:\n",
+        "        size = len(np.array(dset[key_k])[:,0])\n",
+        "        if size > max_size:\n",
+        "            max_size = size\n",
+        "            max_key = key_k\n",
+        "        if size < min_size:\n",
+        "            min_size = size\n",
+        "            min_key = key_k\n",
+        "    return (max_size, min_size, max_key, min_key)"
+      ],
+      "execution_count": 7,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "0SYcu6PPCo_0"
+      },
+      "source": [
+        "def get_strided_data_clust(dset, keys, variables=3, gt_size=0, step=1, diff=False, verbose=False):\n",
+        "    '''Return list with parts of trajectories and their residuals.\n",
+        "\n",
+        "    Arguments:\n",
+        "    dset -- h5py Data set with trajectory data\n",
+        "        keys -- keys for extracting data from `dset`\n",
+        "\n",
+        "    Keyword arguments:\n",
+        "    variables -- (default: 3) how many variables to extract:\n",
+        "                     3 for XYZ -- coordinates,\n",
+        "                     6 for XYZUVW -- coordinates and speeds,\n",
+        "                     7 for XYZUVWH -- coords, speeds and altitude\n",
+        "\n",
+        "        gt_size -- how many trajectory points are to be observed\n",
+        "        step -- (default: 1)\n",
+        "                if 1, every row from the `dset` will be processed,\n",
+        "                if >1, some rows will be skipped accordingly.\n",
+        "        diff -- (default: False) toggle extract differentiated relative trajectories\n",
+        "    '''\n",
+        "    assert gt_size > 1\n",
+        "    assert variables in [3, 6, 7]\n",
+        "\n",
+        "    # Create list with parts of trajectories,\n",
+        "    # each element has gt_size trajectory points\n",
+        "    data_seqs = []\n",
+        "\n",
+        "    # Set of configs for each trajectory.\n",
+        "    configs = {}\n",
+        "\n",
+        "    # List of trajectory indices\n",
+        "    # (to which trajectory this traj_elem belongs to)\n",
+        "    traj_ids = []\n",
+        "\n",
+        "\n",
+        "    # Collect trajectories, preprocess and\n",
+        "    # split them into trajectory parts\n",
+        "    for k in tqdm(range(len(keys)), disable=1-verbose, desc='Collecting strided data'):\n",
+        "        # Get relative trajectory from the dataset\n",
+        "        rt = RelativeTrajectory(dset[keys[k]], diff=diff)\n",
+        "        configs[k] = rt.info()  # save for future restoration\n",
+        "\n",
+        "        # Collect list of trajectory parts from `rt`\n",
+        "        # using time window gt_size and time shift `step`\n",
+        "        if gt_size < rt.data.shape[0]:\n",
+        "            for i in range(1 + (rt.data.shape[0] - gt_size) // step):\n",
+        "                data_seqs.append([rt.data[i*step : i*step + gt_size, :variables]])\n",
+        "                traj_ids.append(k)\n",
+        "        else:\n",
+        "            new_rt = np.zeros((gt_size,variables))  \n",
+        "            new_rt[0:rt.data.shape[0],0:variables] = rt.data[:, :variables]\n",
+        "            data_seqs.append([new_rt])\n",
+        "            traj_ids.append(k)\n",
+        "            \n",
+        "    # Collect all data seqs into one huge dataset\n",
+        "    # of shape [? , gt_size, variables]\n",
+        "    data_seqs_all = np.stack(data_seqs).squeeze()\n",
+        "    traj_ids_all = np.stack(traj_ids)\n",
+        "\n",
+        "    # Calculate mean and std over all data\n",
+        "    data_mean = data_seqs_all.mean((0, 1))\n",
+        "    data_std = data_seqs_all.std((0, 1))\n",
+        "    res_mean = np.zeros(variables)\n",
+        "    res_std = np.ones(variables)\n",
+        "    \n",
+        "    \n",
+        "    stats = {\n",
+        "        'data_mean': data_mean,\n",
+        "        'data_std': data_std,\n",
+        "        'res_mean': res_mean,\n",
+        "        'res_std': res_std\n",
+        "    }\n",
+        "\n",
+        "    if verbose:\n",
+        "        with np.printoptions(precision=3):\n",
+        "            print(f'Total trajectory parts: {data_seqs_all.shape[0]}')\n",
+        "            print(f'Each: {gt_size} observed = {gt_size} points in total')\n",
+        "            print(f'Each point contains {data_seqs_all.shape[-1]} variables')\n",
+        "\n",
+        "            print('Data mean:', stats['data_mean'],\n",
+        "                  'Data std:', stats['data_std'],\n",
+        "                  sep='\\\\n')\n",
+        "\n",
+        "    return (\n",
+        "        data_seqs_all.squeeze()[:, :gt_size], # src sequences\n",
+        "        configs,\n",
+        "        stats,\n",
+        "        traj_ids_all\n",
+        "    )"
+      ],
+      "execution_count": 8,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "RiOF9nCACo_0"
+      },
+      "source": [
+        "class TrajectoryDataset(torch.utils.data.Dataset):\n",
+        "    def __init__(self, data, name, variables=3, configs=None, stats=None):\n",
+        "        super().__init__()\n",
+        "    \n",
+        "        self.data = data\n",
+        "        self.name = name\n",
+        "        self.variables = variables\n",
+        "        self.configs = configs\n",
+        "        self.stats = stats\n",
+        "        \n",
+        "    def __len__(self):\n",
+        "        return self.data['src'].shape[0]\n",
+        "    \n",
+        "    def __getitem__(self, index):\n",
+        "        \n",
+        "        ret =  {\n",
+        "            'src': torch.Tensor(self.data['src'][index]),\n",
+        "            'traj_id': self.data['traj_ids'][index],\n",
+        "        }\n",
+        "        return ret"
+      ],
+      "execution_count": 9,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "vq55tXvZCo_0"
+      },
+      "source": [
+        "def create_dataset(dset, keys, name, variables=3, gt_size=8, step=1, diff=False, train=True, scaler=None, verbose=False):\n",
+        "    \"\"\"Create TrajectoryDataset for training NNs.\n",
+        "\n",
+        "    Arguments:\n",
+        "        dset -- h5py dataset object\n",
+        "        keys -- list of strings: keys for extracting data from `dset`\n",
+        "        name -- name of the TrajectoryDataset\n",
+        "\n",
+        "    Keyword arguments:\n",
+        "        variables -- (default: 3) how many variables to extract:\n",
+        "                     3 for XYZ -- coordinates,\n",
+        "                     6 for XYZUVW -- coordinates and speeds,\n",
+        "                     7 for XYZUVWH -- coords, speeds and altitude\n",
+        "\n",
+        "        residuals -- (default: True) if True, residuals of trajectory will \n",
+        "                     be concatenated, such that, in case of 3 variables: \n",
+        "                     [[X1, Y1, Z1],      [[X1, Y1, Z1,     0,     0,     0],\n",
+        "                      [X2, Y2, Z2],  -->  [X2, Y2, Z2, X2-X1, Y2-Y1, Z2-Z1],\n",
+        "                      [X3, Y3, Z3]]       [X3, Y3, Z3, X3-X2, Y3-Y2, Z3-Z2]]\n",
+        "\n",
+        "        gt_size -- how many points are observed (model input)\n",
+        "        horizon -- how many points the model tries to predict into the future\n",
+        "        step -- stride step for data\n",
+        "        diff -- toggle differentiate trajectories\n",
+        "        train -- this data will be used for training\n",
+        "        scaler -- custom scaler, so data will have zero mean and unit variance\n",
+        "        verbose -- toggle print info to the terminal\n",
+        "        \n",
+        "    Note:\n",
+        "        If `train == True`, the scaler will fit on the collected data and\n",
+        "        then returned as the TrajectoryDataset.scaler attribute\n",
+        "        \n",
+        "        If 'train == False', this function will look for scaler from the \n",
+        "        arguments, then use it to scale collected data for evaluation.\n",
+        "    \"\"\"\n",
+        "    if verbose:\n",
+        "        print(f\"Loading dataset in {'train' if train else 'evaluation'} mode...\")\n",
+        "\n",
+        "    inp, configs, stats, traj_ids = get_strided_data_clust(\n",
+        "        dset, keys, variables, gt_size, step, diff, verbose)\n",
+        "\n",
+        "    data = {\n",
+        "        'src': inp,\n",
+        "        'traj_ids': traj_ids\n",
+        "    }\n",
+        "\n",
+        "    return TrajectoryDataset(data, name, variables, configs, stats)"
+      ],
+      "execution_count": 10,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sd2_pcRxCo_0",
+        "outputId": "8938eb78-16e7-4f56-82eb-d381b7acec36"
+      },
+      "source": [
+        "max_len_trajectory, min_len_trajectory, key_max, key_min = max_min_len_coordinate(dset, dset.keys())\n",
+        "max_len_trajectory, min_len_trajectory, key_max, key_min"
+      ],
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(458, 162, '/ballistic_raw/BALLISTIC_665', '/ballistic_raw/BALLISTIC_264')"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 12
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "2AMsiDy5Co_1"
+      },
+      "source": [
+        "BATCH_SIZE =100\n",
+        "SET_LONG = min_len_trajectory\n",
+        "VEC_DIM = 3\n",
+        "MEM_RNN = SET_LONG*15\n",
+        "EPOC_NUM = 21"
+      ],
+      "execution_count": 88,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 151,
+          "referenced_widgets": [
+            "c5551c229cfa458e9a16b5602cccd491",
+            "e3cb051baf5d40088b2a78b327ac2ba6",
+            "6e0a029a348d44cb8afff4f016574244",
+            "6a9907fd77884c4886811c678e1933a9",
+            "4a21cc0a84e74405a0be32d14d4384ee",
+            "52f845857ccd44dd81aa95b16a551c4b",
+            "8a960a059a0c4a65ba0c4e34624ddb0a",
+            "da71acce88c74b73a97f7ceae58f434c"
+          ]
+        },
+        "id": "JJW7miLQCo_2",
+        "outputId": "b30970aa-8415-4daa-ab7a-df670faff185"
+      },
+      "source": [
+        "td = create_dataset(\n",
+        "    dset,\n",
+        "    train_keys,\n",
+        "    name='train',\n",
+        "    gt_size=SET_LONG,\n",
+        "    step=SET_LONG,\n",
+        "    variables=VEC_DIM,\n",
+        "    train=True,\n",
+        "    verbose=True\n",
+        ")"
+      ],
+      "execution_count": 66,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Loading dataset in train mode...\n"
+          ],
+          "name": "stdout"
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "application/vnd.jupyter.widget-view+json": {
+              "model_id": "c5551c229cfa458e9a16b5602cccd491",
+              "version_minor": 0,
+              "version_major": 2
+            },
+            "text/plain": [
+              "HBox(children=(FloatProgress(value=0.0, description='Collecting strided data', max=700.0, style=ProgressStyle(…"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          }
+        },
+        {
+          "output_type": "stream",
+          "text": [
+            "\n",
+            "Total trajectory parts: 867\n",
+            "Each: 162 observed = 162 points in total\n",
+            "Each point contains 3 variables\n",
+            "Data mean:\\n[ 43.249  66.819 -45.809]\\nData std:\\n[33.861 50.311 52.817]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "FRpxGAaaCo_2"
+      },
+      "source": [
+        "train_dl = DataLoader(\n",
+        "    td,\n",
+        "    batch_size=BATCH_SIZE,\n",
+        "    shuffle=True, #try  с\\n\",\n",
+        "    num_workers=1) #num_workers=-2# use CPU\""
+      ],
+      "execution_count": 87,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "FW67uWwXCo_2"
+      },
+      "source": [
+        "## Recurrent block"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "KL4LZzWECo_2"
+      },
+      "source": [
+        "# Our recurrent block\n",
+        "class ModuleRNN(nn.Module):\n",
+        "    \"\"\"\n",
+        "    Implement the scheme above as torch module\n",
+        "    torch style\n",
+        "    \n",
+        "    \"\"\"\n",
+        "    def __init__(self, vect_dim=3, rnn_num_units=64):\n",
+        "        super(self.__class__,self).__init__()\n",
+        "        self.num_units = rnn_num_units\n",
+        "\n",
+        "#         our linear layer\n",
+        "        self.rnn_update = nn.Linear(vect_dim + rnn_num_units, rnn_num_units)\n",
+        "        self.rnn_to_logits = nn.Linear(rnn_num_units, vect_dim)\n",
+        "\n",
+        "    def forward(self, x, h_prev):\n",
+        "        \"\"\"\n",
+        "        This method computes h_next(x, h_prev) and log P(x_next | h_next)\n",
+        "        We'll call it repeatedly to produce the whole sequence.\n",
+        "\n",
+        "        :param x: batch of character ids, containing vector of int64\n",
+        "        :param h_prev: previous rnn hidden states, containing matrix [batch, rnn_num_units] of float32\n",
+        "        \"\"\"\n",
+        "\n",
+        "        x_and_h = torch.cat([x, h_prev], dim=-1) # [x, h_prev]\n",
+        "        h_next = self.rnn_update(x_and_h)\n",
+        "\n",
+        "        h_next = torch.tanh(h_next) # activation function\n",
+        "\n",
+        "        assert h_next.size() == h_prev.size()\n",
+        "\n",
+        "        #compute logits for next character probs\n",
+        "        logits = self.rnn_to_logits(h_next)\n",
+        "\n",
+        "        return h_next, logits\n",
+        "\n",
+        "    def initial_state(self, batch_size):\n",
+        "        \"\"\" return rnn state before it processes first input (aka h0) \"\"\"\n",
+        "        return torch.zeros(batch_size, self.num_units, requires_grad=True)"
+      ],
+      "execution_count": 16,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lB8gB8vsCo_2"
+      },
+      "source": [
+        "## RNN Loop"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "vbmQ2BGACo_2"
+      },
+      "source": [
+        "def rnn_loop(trajectories_rnn, batch_ix):\n",
+        "    \"\"\"\n",
+        "    Computes log P(next_character) for all time-steps in names_ix\n",
+        "    :param names_ix: an int32 matrix of shape [batch, time], output of to_matrix(names)\n",
+        "    \"\"\"\n",
+        "    batch_size, max_length, vec_dim = batch_ix.size()\n",
+        "\n",
+        "    hid_state = trajectories_rnn.initial_state(batch_size)\n",
+        "    logprobs = []\n",
+        "\n",
+        "    for x_t in batch_ix.transpose(0,1):\n",
+        "        hid_state, logits = trajectories_rnn(x_t, hid_state)  # <-- here we call your one-step code\n",
+        "        logprobs.append(logits)\n",
+        "\n",
+        "    return torch.stack(logprobs, dim=1)"
+      ],
+      "execution_count": 17,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "siFfI-mzCo_2"
+      },
+      "source": [
+        "from IPython.display import clear_output"
+      ],
+      "execution_count": 18,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "qJWSxsuACo_2"
+      },
+      "source": [
+        "trajectories_rnn = ModuleRNN(vect_dim=VEC_DIM, rnn_num_units=MEM_RNN)\n",
+        "criterion = nn.MSELoss() # nn.CrossEntropyLoss()\n",
+        "opt = torch.optim.Adam(trajectories_rnn.parameters(), lr=1e-3) # lr=1e-4\n",
+        "history = []\n",
+        "opt_c = 0\n",
+        "error = 0"
+      ],
+      "execution_count": 89,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6_JMr5rUCo_2"
+      },
+      "source": [
+        "## The training loop"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 316
+        },
+        "id": "iQ0HbUBMCo_2",
+        "outputId": "1d9e14a0-ee01-44a6-bcea-8e10ade8936b"
+      },
+      "source": [
+        "# epoc\n",
+        "for epoc in range(EPOC_NUM):\n",
+        "  for id_b, batch in enumerate(train_dl):\n",
+        "      if epoc == 18:\n",
+        "          opt_c = 1\n",
+        "          opt = torch.optim.Adam(trajectories_rnn.parameters(), lr=1e-4) # lr=1e-4\n",
+        "      opt.zero_grad()\n",
+        "\n",
+        "      logp_seq = rnn_loop(trajectories_rnn, batch['src'])\n",
+        "\n",
+        "      # compute loss\n",
+        "      predictions_logp = logp_seq[:, :-1]\n",
+        "      actual_next_tokens = batch['src'][:, 1:]\n",
+        "\n",
+        "      # print(predictions_logp.shape, actual_next_tokens.shape)\n",
+        "      loss = criterion(\n",
+        "          predictions_logp.contiguous().view(-1),\n",
+        "          actual_next_tokens.contiguous().view(-1)\n",
+        "      ) \n",
+        "\n",
+        "      \n",
+        "      # train with backprop\n",
+        "      loss.backward()\n",
+        "      opt.step()\n",
+        "      \n",
+        "\n",
+        "      \n",
+        "      history.append(loss.data.numpy())\n",
+        "      if (id_b+1)%1==0:\n",
+        "          clear_output(True)\n",
+        "          if error > 0:\n",
+        "            print('Warning: the network is hard to learn.')\n",
+        "          print('epoc =', epoc+1, ';', (epoc+1)*100//EPOC_NUM,'%;', 'iteration = ', id_b + 1)\n",
+        "          print('loss', np.mean(history[-10:]))\n",
+        "          print('change', opt_c,'opt')\n",
+        "          plt.plot(history,label='loss')\n",
+        "          plt.legend()\n",
+        "          plt.show()\n",
+        "  if np.mean(history[:10]) < np.mean(history[-10:]):\n",
+        "    error+=1\n",
+        "    assert error!=3, \"RNN didn't converge.\""
+      ],
+      "execution_count": 90,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "epoc = 21 ; 100 %; iteration =  9\n",
+            "loss 81.4203\n",
+            "change 1 opt\n"
+          ],
+          "name": "stdout"
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "image/png": "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\n",
+            "text/plain": [
+              "<Figure size 432x288 with 1 Axes>"
+            ]
+          },
+          "metadata": {
+            "tags": [],
+            "needs_background": "light"
+          }
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "KKK_eSsDIB9m",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d1289efe-9978-4646-b2c9-ff8cfb29fd9f"
+      },
+      "source": [
+        "print('new finally loss = ', np.mean(history[-10:]))"
+      ],
+      "execution_count": 91,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "new finally loss =  81.4203\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "MCvfHd-btqLW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "fe25003e-2dc2-48de-c96b-692e302c433d"
+      },
+      "source": [
+        "print('old finally loss = ', np.mean(history[-10:]))"
+      ],
+      "execution_count": 64,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "old finally loss =  73.65712\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}

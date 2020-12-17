@@ -1,0 +1,22 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Введение}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Постановка задачи}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Актуальность задачи}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Фильтр Калмана}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Алгоритм фильтра Калмана}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Модель фильтра Калмана}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Итог}{9}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Рекуррентные нейронные сети}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Линейные модели}{10}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Функции активации}{13}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}RNN}{14}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Простейшая схема RNN}{14}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Фильтр Калмана и LSTM}{16}{subsubsection.3.3.2}%
+\contentsline {section}{\numberline {4}Реализация}{19}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Обзор}{19}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Обучение и валидация}{21}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Тестирование}{21}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Сравнительный анализ}{23}{section.5}%
+\contentsline {section}{\numberline {6}Выводы}{27}{section.6}%
+\contentsline {section}{\numberline {7}Список литературы}{28}{section.7}%
+\contentsline {section}{\numberline {8}Приложение}{28}{section.8}%

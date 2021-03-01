@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.23)  17 DEC 2020 04:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.23)  17 DEC 2020 12:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -686,7 +686,7 @@ LaTeX Info: Redefining \nameref on input line 71.
 \c@lstlisting=\count288
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<./images/almaz.jpg, id=80, 903.375pt x 903.375pt>
+<./images/almaz.jpg, id=88, 903.375pt x 903.375pt>
 File: ./images/almaz.jpg Graphic file (type jpg)
 <use ./images/almaz.jpg>
 Package pdftex.def Info: ./images/almaz.jpg  used on input line 96.
@@ -694,7 +694,23 @@ Package pdftex.def Info: ./images/almaz.jpg  used on input line 96.
  [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./image
-s/almaz.jpg>] (./coursework.toc)
+s/almaz.jpg>] (./coursework.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 3.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+))
 \tf@toc=\write4
 \openout4 = `coursework.toc'.
 
@@ -735,12 +751,6 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\cyre' on input line 111.
-
-
-Overfull \hbox (29.09558pt too wide) in paragraph at lines 113--114
-\T2A/cmr/m/n/10.95 сиг-нал и же-ла-ние уве-ли-чить точ-ность филь-тра с по-яв-л
-е-ни-ем но-вых аппаратно-
- []
 
 [2]
 
@@ -1020,23 +1030,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\cyra' on input line 132.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 133
-.
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 133
-.
 
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 13
-3.
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/wasysym/uwasy.fd
-File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
-)
 Overfull \hbox (4.54881pt too wide) detected at line 170
 \OT1/cmr/bx/n/10.95 Q[] \OT1/cmr/m/n/10.95 = [][] \OT1/cmr/bx/n/10.95 F\OT1/cmr
 /m/n/10.95 (\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/10.95 )[]\OT1/cmr/bx/n/10.95 F[]\
@@ -1133,17 +1127,17 @@ LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line
  (/usr/local/texlive/2020/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 ) [6]
-<images/kalmanfilter1.png, id=179, 560.8152pt x 282.5757pt>
+<images/kalmanfilter1.png, id=209, 560.8152pt x 282.5757pt>
 File: images/kalmanfilter1.png Graphic file (type png)
 <use images/kalmanfilter1.png>
 Package pdftex.def Info: images/kalmanfilter1.png  used on input line 236.
 (pdftex.def)             Requested size: 323.9978pt x 163.25156pt.
-<images/kalmanfilter2.png, id=184, 560.8152pt x 282.5757pt>
+<images/kalmanfilter2.png, id=214, 560.8152pt x 282.5757pt>
 File: images/kalmanfilter2.png Graphic file (type png)
 <use images/kalmanfilter2.png>
 Package pdftex.def Info: images/kalmanfilter2.png  used on input line 245.
 (pdftex.def)             Requested size: 323.9978pt x 163.25156pt.
-<images/kalmanfilter3.png, id=185, 554.3109pt x 282.5757pt>
+<images/kalmanfilter3.png, id=215, 554.3109pt x 282.5757pt>
 File: images/kalmanfilter3.png Graphic file (type png)
 <use images/kalmanfilter3.png>
 Package pdftex.def Info: images/kalmanfilter3.png  used on input line 252.
@@ -1152,7 +1146,7 @@ Package pdftex.def Info: images/kalmanfilter3.png  used on input line 252.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/kalmanfilter4.png, id=188, 552.1428pt x 282.5757pt>
+<images/kalmanfilter4.png, id=218, 552.1428pt x 282.5757pt>
 File: images/kalmanfilter4.png Graphic file (type png)
 <use images/kalmanfilter4.png>
 Package pdftex.def Info: images/kalmanfilter4.png  used on input line 261.
@@ -1160,7 +1154,7 @@ Package pdftex.def Info: images/kalmanfilter4.png  used on input line 261.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/kalmanfilter5.png, id=189, 552.1428pt x 282.5757pt>
+<images/kalmanfilter5.png, id=219, 552.1428pt x 282.5757pt>
 File: images/kalmanfilter5.png Graphic file (type png)
 <use images/kalmanfilter5.png>
 Package pdftex.def Info: images/kalmanfilter5.png  used on input line 268.
@@ -1479,13 +1473,13 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\cyra' on input line 420.
 
-<images/RNN1.png, id=274, 1039.885pt x 546.04pt>
+<images/RNN1.png, id=303, 1039.885pt x 546.04pt>
 File: images/RNN1.png Graphic file (type png)
 <use images/RNN1.png>
 Package pdftex.def Info: images/RNN1.png  used on input line 424.
 (pdftex.def)             Requested size: 323.9978pt x 170.12883pt.
 [14 <./images/RNN1.png>]
-<images/RNN2.png, id=291, 998.73125pt x 216.81pt>
+<images/RNN2.png, id=320, 998.73125pt x 216.81pt>
 File: images/RNN2.png Graphic file (type png)
 <use images/RNN2.png>
 Package pdftex.def Info: images/RNN2.png  used on input line 433.
@@ -1547,12 +1541,12 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\cyri' on input line 443.
 
-<images/RNN3.png, id=310, 1091.07625pt x 592.2125pt>
+<images/RNN3.png, id=339, 1091.07625pt x 592.2125pt>
 File: images/RNN3.png Graphic file (type png)
 <use images/RNN3.png>
 Package pdftex.def Info: images/RNN3.png  used on input line 449.
 (pdftex.def)             Requested size: 360.0pt x 195.39458pt.
-<images/RNN4.png, id=320, 1116.17pt x 633.36626pt>
+<images/RNN4.png, id=349, 1116.17pt x 633.36626pt>
 File: images/RNN4.png Graphic file (type png)
 <use images/RNN4.png>
 Package pdftex.def Info: images/RNN4.png  used on input line 457.
@@ -1570,7 +1564,7 @@ Overfull \hbox (5.70398pt too wide) in paragraph at lines 484--485
 на за-ме-ним пункт
  []
 
-<images/RNN5.png, id=341, 1039.885pt x 474.77374pt>
+<images/RNN5.png, id=371, 1039.885pt x 474.77374pt>
 File: images/RNN5.png Graphic file (type png)
 <use images/RNN5.png>
 Package pdftex.def Info: images/RNN5.png  used on input line 495.
@@ -1578,12 +1572,7 @@ Package pdftex.def Info: images/RNN5.png  used on input line 495.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17 <./images/RNN4.png>]
-
-LaTeX Warning: Hyper reference `appendix' on page 18 undefined on input line 50
-2.
-
-[18 <./images/RNN5.png>]
+[17 <./images/RNN4.png>] [18 <./images/RNN5.png>]
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\CYRR' on input line 504.
@@ -1623,10 +1612,6 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\cyrya' on input line 504.
-
-
-LaTeX Warning: Hyper reference `appendix' on page 19 undefined on input line 50
-6.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
@@ -1734,12 +1719,12 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\cyrya' on input line 576.
 
-<images/losstrain.png, id=388, 923.45pt x 647.41875pt>
+<images/losstrain.png, id=420, 923.45pt x 647.41875pt>
 File: images/losstrain.png Graphic file (type png)
 <use images/losstrain.png>
 Package pdftex.def Info: images/losstrain.png  used on input line 581.
 (pdftex.def)             Requested size: 176.40198pt x 123.67271pt.
-<images/valtrain.png, id=389, 392.46625pt x 278.03876pt>
+<images/valtrain.png, id=421, 392.46625pt x 278.03876pt>
 File: images/valtrain.png Graphic file (type png)
 <use images/valtrain.png>
 Package pdftex.def Info: images/valtrain.png  used on input line 585.
@@ -1793,12 +1778,12 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\cyre' on input line 606.
 
-<images/losstest.png, id=420, 868.24374pt x 592.2125pt>
+<images/losstest.png, id=452, 868.24374pt x 592.2125pt>
 File: images/losstest.png Graphic file (type png)
 <use images/losstest.png>
 Package pdftex.def Info: images/losstest.png  used on input line 610.
 (pdftex.def)             Requested size: 176.40198pt x 120.31998pt.
-<images/valtest.png, id=421, 908.39375pt x 610.28pt>
+<images/valtest.png, id=453, 908.39375pt x 610.28pt>
 File: images/valtest.png Graphic file (type png)
 <use images/valtest.png>
 Package pdftex.def Info: images/valtest.png  used on input line 614.
@@ -1884,55 +1869,55 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\cyrz' on input line 625.
 
-<images/battle1.png, id=447, 552.0625pt x 367.3725pt>
+<images/battle1.png, id=480, 552.0625pt x 367.3725pt>
 File: images/battle1.png Graphic file (type png)
 <use images/battle1.png>
 Package pdftex.def Info: images/battle1.png  used on input line 630.
 (pdftex.def)             Requested size: 216.0022pt x 143.73996pt.
-<images/battle2.png, id=448, 551.05875pt x 375.4025pt>
+<images/battle2.png, id=481, 551.05875pt x 375.4025pt>
 File: images/battle2.png Graphic file (type png)
 <use images/battle2.png>
 Package pdftex.def Info: images/battle2.png  used on input line 639.
 (pdftex.def)             Requested size: 216.0022pt x 147.15105pt.
 [23 <./images/battle1.png> <./images/battle2.png>]
-<images/kalmanx.png, id=457, 533.995pt x 354.32375pt>
+<images/kalmanx.png, id=490, 533.995pt x 354.32375pt>
 File: images/kalmanx.png Graphic file (type png)
 <use images/kalmanx.png>
 Package pdftex.def Info: images/kalmanx.png  used on input line 653.
 (pdftex.def)             Requested size: 176.40198pt x 117.04613pt.
-<images/nnx.png, id=458, 538.01pt x 371.3875pt>
+<images/nnx.png, id=491, 538.01pt x 371.3875pt>
 File: images/nnx.png Graphic file (type png)
 <use images/nnx.png>
 Package pdftex.def Info: images/nnx.png  used on input line 657.
 (pdftex.def)             Requested size: 176.40198pt x 121.77054pt.
-<images/kalmany.png, id=459, 560.0925pt x 388.45125pt>
+<images/kalmany.png, id=492, 560.0925pt x 388.45125pt>
 File: images/kalmany.png Graphic file (type png)
 <use images/kalmany.png>
 Package pdftex.def Info: images/kalmany.png  used on input line 665.
 (pdftex.def)             Requested size: 176.40198pt x 122.345pt.
-<images/nny.png, id=460, 553.06625pt x 379.4175pt>
+<images/nny.png, id=493, 553.06625pt x 379.4175pt>
 File: images/nny.png Graphic file (type png)
 <use images/nny.png>
 Package pdftex.def Info: images/nny.png  used on input line 669.
 (pdftex.def)             Requested size: 176.40198pt x 121.0166pt.
  [24 <./images/kalmanx.png> <./images/nnx.png> <./images/kalmany.png> <./images
 /nny.png>]
-<images/kalmanz.png, id=472, 561.09625pt x 386.44376pt>
+<images/kalmanz.png, id=505, 561.09625pt x 386.44376pt>
 File: images/kalmanz.png Graphic file (type png)
 <use images/kalmanz.png>
 Package pdftex.def Info: images/kalmanz.png  used on input line 679.
 (pdftex.def)             Requested size: 176.40198pt x 121.48866pt.
-<images/nnz.png, id=473, 562.1pt x 386.44376pt>
+<images/nnz.png, id=506, 562.1pt x 386.44376pt>
 File: images/nnz.png Graphic file (type png)
 <use images/nnz.png>
 Package pdftex.def Info: images/nnz.png  used on input line 683.
 (pdftex.def)             Requested size: 176.40198pt x 121.27638pt.
-<images/xy.png, id=474, 566.115pt x 376.40625pt>
+<images/xy.png, id=507, 566.115pt x 376.40625pt>
 File: images/xy.png Graphic file (type png)
 <use images/xy.png>
 Package pdftex.def Info: images/xy.png  used on input line 695.
 (pdftex.def)             Requested size: 251.9989pt x 167.54906pt.
-<images/xz.png, id=475, 556.0775pt x 377.41pt>
+<images/xz.png, id=508, 556.0775pt x 377.41pt>
 File: images/xz.png Graphic file (type png)
 <use images/xz.png>
 Package pdftex.def Info: images/xz.png  used on input line 702.
@@ -1942,7 +1927,7 @@ Package pdftex.def Info: images/xz.png  used on input line 702.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [25 <./images/kalmanz.png> <./images/nnz.png> <./images/xy.png>]
-<images/yz.png, id=485, 563.10374pt x 380.42125pt>
+<images/yz.png, id=518, 563.10374pt x 380.42125pt>
 File: images/yz.png Graphic file (type png)
 <use images/yz.png>
 Package pdftex.def Info: images/yz.png  used on input line 709.
@@ -2102,15 +2087,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 763.
  (./coursework.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 763.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 763.
+Package rerunfilecheck Info: File `coursework.out' has not changed.
+(rerunfilecheck)             Checksum: 8E8B246B58D301052E653FBBEF6BAB1D;997.
 
-
-Package rerunfilecheck Warning: File `coursework.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `coursework.out':
-(rerunfilecheck)             Before: 62D8C95130E6602367E37B1B79F20BC9;924
-(rerunfilecheck)             After:  8E8B246B58D301052E653FBBEF6BAB1D;997.
 
 LaTeX Warning: There were undefined references.
 
@@ -2120,10 +2099,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 763.
  ) 
 Here is how much of TeX's memory you used:
- 12178 strings out of 480608
- 180232 string characters out of 5903629
+ 12180 strings out of 480608
+ 180254 string characters out of 5903629
  687342 words of memory out of 5000000
- 27628 multiletter control sequences out of 15000+600000
+ 27630 multiletter control sequences out of 15000+600000
  559116 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,9n,47p,2180b,1947s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2159,10 +2138,10 @@ pe1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
 public/cm-super/sfti1095.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
 blic/cm-super/sfti1440.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
 ic/cm-super/sftt1000.pfb>
-Output written on coursework.pdf (29 pages, 8122133 bytes).
+Output written on coursework.pdf (29 pages, 8129596 bytes).
 PDF statistics:
- 654 PDF objects out of 1000 (max. 8388607)
- 485 compressed objects within 5 object streams
+ 685 PDF objects out of 1000 (max. 8388607)
+ 515 compressed objects within 6 object streams
  169 named destinations out of 1000 (max. 500000)
- 283 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 299 words of extra memory for PDF output out of 10000 (max. 10000000)
 
